@@ -14,13 +14,16 @@
 
 $(call inherit-product, device/yu/lettuce/full_lettuce.mk)
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit some common XOSP stuff.
+$(call inherit-product, vendor/xosp/config/common_full_phone.mk)
+
+# Inherit some proprietary XOSP stuff.
+$(call inherit-product, vendor/xosp/config/xosp.mk)
 
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8916
 
-PRODUCT_NAME := cm_lettuce
+PRODUCT_NAME := xosp_lettuce
 BOARD_VENDOR := yu
 PRODUCT_DEVICE := lettuce
 
